@@ -13,8 +13,7 @@
         <Border BorderBrush="Black" CornerRadius="3" BorderThickness="3" Margin="10">
             <StackPanel VerticalAlignment="Top">
                 <StackPanel.Background>
-                    <LinearGradientBrush EndPoint="0.5,1"
-                                         StartPoint="0.5,0">
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Violet"
                                       Offset="0" />
                         <GradientStop Color="Yellow"
