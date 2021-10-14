@@ -9,48 +9,46 @@
         Height="450"
         Width="800"
         Icon="Assets\NBALogo.ico">
-    <StackPanel>
-        <Border BorderBrush="Black" CornerRadius="3" BorderThickness="3" Margin="10">
-            <StackPanel VerticalAlignment="Top">
-                <StackPanel.Background>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontWeight"
+                    Value="Bold"></Setter>
+            <Setter Property="TextWrapping"
+                    Value="Wrap"></Setter>
+            <Setter Property="TextAlignment"
+                    Value="Center"></Setter>
+            <Setter Property="FontSize"
+                    Value="36"></Setter>
+        </Style>
+        
+        
+        <Style TargetType="{x:Type TextBlock}"
+               x:Key="TextoTituloBlanco"
+               BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Foreground"
+                    Value="White"></Setter>
+        </Style>
+
+        <Style TargetType="{x:Type StackPanel}" x:Key="EquipoUno">
+            <Setter Property="VerticalAlignment" Value="Top"></Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1"
+                                         StartPoint="0.5,0">
                         <GradientStop Color="Violet"
                                       Offset="0" />
                         <GradientStop Color="Yellow"
                                       Offset="1" />
                     </LinearGradientBrush>
-                </StackPanel.Background>
-                <TextBlock FontWeight="Bold"
-                           TextWrapping="Wrap"
-                           TextAlignment="Center"
-                           FontSize="36">Los Ángeles Leakers</TextBlock>
-                <WrapPanel HorizontalAlignment="Center">
-                    <Image Source="/Assets/14_lakers.png"
-                           Width="130"
-                           Margin="10" />
-                    <Image Source="/Assets/23_lakers.png"
-                           Width="130"
-                           Margin="10" />
-                    <Image Source="/Assets/3_lakers.png"
-                           Width="130"
-                           Margin="10" />
-                    <Image Source="/Assets/39_lakers.png"
-                           Width="130"
-                           Margin="10" />
-                    <Image Source="/Assets/9_lakers.png"
-                           Width="130"
-                           Margin="10" />
-                </WrapPanel>
-            </StackPanel>
-        </Border>
-
-
-        <Border BorderBrush="Black"
-                BorderThickness="4"
-                CornerRadius="3"
-                Margin="10">
-            <StackPanel VerticalAlignment="Bottom">
-                <StackPanel.Background>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style TargetType="{x:Type StackPanel}" x:Key="EquipoDos">
+            <Setter Property="VerticalAlignment" Value="Bottom"></Setter>
+            <Setter Property="Background">
+                <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1"
                                          StartPoint="0.5,0">
                         <GradientStop Color="Black"
@@ -58,12 +56,46 @@
                         <GradientStop Color="Red"
                                       Offset="1" />
                     </LinearGradientBrush>
-                </StackPanel.Background>
-                <TextBlock FontWeight="Bold"
-                           TextWrapping="Wrap"
-                           TextAlignment="Center"
-                           FontSize="36"
-                           Foreground="White">Miami heat</TextBlock>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type Border}" x:Key="EquiposBorder">
+            <Setter Property="BorderBrush"
+                    Value="Black"></Setter>
+            <Setter Property="BorderThickness"
+                    Value="4"></Setter>
+            <Setter Property="CornerRadius" Value="3"></Setter>
+            <Setter Property="Margin"
+                    Value="10"></Setter>
+        </Style>
+
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="Width"
+                    Value="130"></Setter>
+            <Setter Property="Margin"
+                    Value="10"></Setter>
+        </Style>
+    </Window.Resources>
+    
+    <StackPanel>
+        <Border Style="{StaticResource EquiposBorder}">
+            <StackPanel Style="{StaticResource EquipoUno}">
+                <TextBlock >Los Ángeles Leakers</TextBlock>
+                <WrapPanel HorizontalAlignment="Center">
+                    <Image Source="/Assets/14_lakers.png"/>
+                    <Image Source="/Assets/23_lakers.png"/>
+                    <Image Source="/Assets/3_lakers.png"/>
+                    <Image Source="/Assets/39_lakers.png"/>
+                    <Image Source="/Assets/9_lakers.png"/>
+                </WrapPanel>
+            </StackPanel>
+        </Border>
+
+
+        <Border Style="{StaticResource EquiposBorder}">
+            <StackPanel Style="{StaticResource EquipoDos}">
+                <TextBlock Style="{StaticResource TextoTituloBlanco}">Miami heat</TextBlock>
                 <WrapPanel HorizontalAlignment="Center">
                     <Image Source="/Assets/13_heat.png"
                            Width="130"
