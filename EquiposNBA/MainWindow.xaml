@@ -97,21 +97,11 @@
             <StackPanel Style="{StaticResource EquipoDos}">
                 <TextBlock Style="{StaticResource TextoTituloBlanco}">Miami heat</TextBlock>
                 <WrapPanel HorizontalAlignment="Center">
-                    <Image Source="/Assets/13_heat.png"
-                           Width="130"
-                           Margin="10" />
-                    <Image Source="/Assets/14_heat.png"
-                           Width="130"
-                           Margin="10" />
-                    <Image Source="/Assets/22_heat.png"
-                           Width="130"
-                           Margin="10" />
-                    <Image Source="/Assets/7_heat.png"
-                           Width="130"
-                           Margin="10" />
-                    <Image Source="/Assets/99_heat.png"
-                           Width="130"
-                           Margin="10" />
+                    <Image Source="/Assets/13_heat.png"/>
+                    <Image Source="/Assets/14_heat.png"/>
+                    <Image Source="/Assets/22_heat.png"/>
+                    <Image Source="/Assets/7_heat.png"/>
+                    <Image Source="/Assets/99_heat.png"/>
                 </WrapPanel>
             </StackPanel>
         </Border>
